@@ -59,13 +59,12 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch",
-  discount: function(string) {
-    if (string === 'teacher' || string === 'student') {
-      this.price = this.price * .75;
+  discount: function(string){
+    if(string === 'teacher' || string === 'student'){
+      return this.price - (this.price * .25);
     } else {
-      this.price = this.price * .9;
+      return this.price - (this.price * .1);
     }
-    return this.price;
   }  
 }
 
@@ -96,7 +95,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -111,9 +111,17 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+  const obj = {
+    name: name,
+    rating: rating,
+    feedback: feedback,
+  }
+  array.push(obj);
+  return (array);
 }
+
+console.log(addReview(reviews,'Billy', 2, 'Lame food!'));
 
 
 
