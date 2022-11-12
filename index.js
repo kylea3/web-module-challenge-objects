@@ -16,10 +16,14 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
-}
-
+function createMenuItem(name, price, category) {
+    const obj = {
+      name:  name,
+      price: price,
+      category: category
+    };
+    return obj;
+  }
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
